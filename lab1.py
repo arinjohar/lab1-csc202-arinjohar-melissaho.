@@ -8,9 +8,31 @@ sys.setrecursionlimit(10**6)
 #Hello I am AJ
 #* Data Definitions
 #* 1)
+
+Celsius : TypeAlias = float
+Fahrenheit : TypeAlias = float
+
 #* 2)
+
+@dataclass(frozen=True)
+class Cents:
+    price : int
+
 #* 3)
+
+@dataclass(frozen=True)
+class PriceRecord:
+    name : str
+    price: Cents
+    
+
 #* 4)
+
+@dataclass(frozen=True)
+class PriceRecord:
+    pitch : float
+    duration: int
+
 #* Design Recipe
 #* 1)
 #* 2)
