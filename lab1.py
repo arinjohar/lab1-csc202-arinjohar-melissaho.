@@ -43,7 +43,24 @@ def up_one_octave(note: MusicalNote) -> MusicalNote:
     return new_note
 
 #* 3)
+
+def second_largest(num1:int, num2:int, num3:int):
+    nums_list = [num1, num2, num3]
+    nums_list.sort()
+    return nums_list[1]
+
 #* 4)
+
+# checks to see if the word has no caps
+def no_caps(word: str):
+    for char in word:
+        if char.islower() == True:
+            continue
+        else:
+            return False
+    
+    return True
+
 class TestClass(unittest.TestCase):
     def test_example(self):
         self.assertEqual( 1, 1 )
@@ -58,7 +75,15 @@ class TestClass(unittest.TestCase):
         self.assertAlmostEqual(up_one_octave(note2 = MusicalNote(3, 5)), MusicalNote(6,5), 1e-3)
         self.assertAlmostEqual(up_one_octave(note3 = MusicalNote(4.356, 2)), MusicalNote(8.712, 2), 1e-3)
         #* 3)
+
+        self.assertEqual(10, second_largest(5, 15, 10))
+        self.assertEqual(2, second_largest(2, 5, 1))
+
         #* 4)
+
+        self.assertEqual(True, no_caps("because"))
+        self.assertEqual(False, no_caps("ProGraMmeR"))
+
         # If this is True, means this .py file is the .py being executed
         # (rather than being imported by the .py that is being executed).
     if (__name__ == '__main__'):
