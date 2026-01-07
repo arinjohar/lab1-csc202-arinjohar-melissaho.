@@ -14,9 +14,7 @@ Fahrenheit : TypeAlias = float
 
 #* 2)
 
-@dataclass(frozen=True)
-class Cents:
-    price : int
+Cents: TypeAlias = int
 
 #* 3)
 
