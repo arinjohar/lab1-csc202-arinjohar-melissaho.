@@ -1,4 +1,4 @@
-from typing import *
+from typing import * # type: ignore
 from dataclasses import dataclass
 import unittest
 import sys
