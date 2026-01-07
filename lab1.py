@@ -29,7 +29,7 @@ class PriceRecord:
 #* 4)
 
 @dataclass(frozen=True)
-class PriceRecord:
+class MusicalNote:
     pitch : float
     duration: int
 
