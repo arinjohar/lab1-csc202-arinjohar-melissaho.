@@ -73,6 +73,7 @@ class TestClass(unittest.TestCase):
         self.assertAlmostEqual(celsius_to_fahrenheit(9), 48.2, delta=self.delta)
 
         #* 2)
+    # cannot do assertAlmostEqual for this function because it is returning a class object
     def test_up_one_octave(self):
         self.assertEqual(up_one_octave(MusicalNote(2.5,3)), MusicalNote(5.0, 3))
         self.assertEqual(up_one_octave(MusicalNote(3, 5)), MusicalNote(6,5))
